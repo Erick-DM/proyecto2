@@ -1,0 +1,424 @@
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+/* Header y Navegación
+   Nota: evitamos usar `position: fixed` en `header` porque bloquea inputs y puede superponerse al contenido.
+   Usamos la clase .banner para el encabezado principal en esta página. */
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+#utsc {
+    max-width: 120px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #e10600;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1580697714317-d7d57b8e65b4?auto=format&fit=crop&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding-top: 64px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+/* Grid Sections */
+.grid-section {
+    padding: 4rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.grid-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #e10600;
+    text-transform: uppercase;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* Cards */
+.card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card h3 {
+    color: #15151e;
+    margin-bottom: 0.5rem;
+}
+
+/* Calendar Section */
+.calendar-section {
+    background-color: #15151e;
+    color: white;
+    padding: 4rem 5%;
+}
+
+.calendar-section h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.race-card {
+    background: rgba(255,255,255,0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    color: white;
+    padding: 3rem 5% 1rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+
+#utsc-footer {
+    max-width: 100px;
+    height: auto;
+}
+
+.footer-links h4 {
+    margin-bottom: 1rem;
+    color: #e10600;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #e10600;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .main-nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    #utsc {
+        max-width: 100px;
+        margin-bottom: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+}
+
+/* Nuevos estilos para sistema de calificaciones */
+.banner{
+    background: linear-gradient(90deg, rgba(0,0,0,0.65), rgba(0,0,0,0.35));
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 5%;
+}
+
+#banner-utsc{
+    max-height: 70px;
+    height: auto;
+}
+
+.banner h1{
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+main{
+    padding: 2rem 5%;
+    max-width: 1100px;
+    margin: 0 auto 4rem auto;
+    /* Separación para que el banner no interfiera con el contenido */
+    margin-top: 1rem;
+}
+
+.form-section{
+    margin-top: 1.5rem;
+}
+
+.form-card{
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.form-card label{
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+#student-name{
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.grades-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+.grades-table th, .grades-table td{
+    padding: 0.8rem;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+select.grade-select{
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+#register-btn{
+    background: #0b79d0;
+    color: white;
+    border: none;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#register-btn:hover{
+    background: #095f9a;
+}
+
+.ranking-section{
+    margin-top: 2rem;
+}
+
+.ranking-card{
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+/* Layout de dos columnas: formulario a la izquierda, ranking a la derecha */
+.two-column{
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 2rem;
+    align-items: start;
+}
+
+/* Forzar tamaño de la sección de ranking y habilitar scroll independiente */
+.ranking-section{
+    margin-top: 0;
+}
+
+.ranking-card{
+    max-height: 520px;
+    overflow-y: auto;
+    padding: 0.5rem;
+}
+
+.ranking-table th, .ranking-table td{
+    padding: 0.65rem;
+}
+
+/* mejorar visibilidad de filas al hacer scroll */
+.ranking-card tr:nth-child(odd){
+    background: rgba(0,0,0,0.02);
+}
+
+/* Mobile: cambiar a columna única */
+@media screen and (max-width: 900px){
+    .two-column{
+        grid-template-columns: 1fr;
+    }
+
+    .ranking-card{
+        max-height: none;
+        overflow: visible;
+    }
+}
+
+.ranking-table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ranking-table th, .ranking-table td{
+    padding: 0.8rem;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+.status-pass{
+    color: #1a8a3f;
+    font-weight: 700;
+}
+
+.status-fail{
+    color: #d93025;
+    font-weight: 700;
+}
+
+/* Animación para cambios en la tabla de clasificación */
+.rank-up{
+    animation: moveUp 1s ease forwards;
+}
+
+.rank-down{
+    animation: moveDown 1s ease forwards;
+}
+
+/* transición suave por defecto en filas */
+.ranking-card tr{
+    transition: transform 0.5s ease, opacity 0.5s ease, background-color 0.3s ease;
+}
+
+@keyframes moveUp{
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes moveDown{
+    0% { transform: translateY(-20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive */
+@media screen and (max-width: 600px){
+    .banner{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+
+    .banner h1{
+        font-size: 1.2rem;
+    }
+}

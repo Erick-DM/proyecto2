@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>Sistema de calificaciones - UTSC</title>
+</head>
+<body>
+    <header class="banner">
+        <img id="banner-utsc" src="UTSC.png" alt="UTSC banner">
+        <h1>Sistema de calificaciones</h1>
+    </header>
+
+    <main>
+        <div class="two-column">
+            <section class="form-section">
+                <div class="form-card">
+                    <label for="student-name">Nombre del alumno</label>
+                    <input type="text" id="student-name" placeholder="Ingresa nombre completo">
+
+                    <form id="grades-form">
+                        <table class="grades-table">
+                            <thead>
+                                <tr>
+                                    <th>Asignatura</th>
+                                    <th>Calificación</th>
+                                </tr>
+                            </thead>
+                            <tbody id="grades-body">
+                                <!-- Filas generadas por JS -->
+                            </tbody>
+                        </table>
+                        <button type="button" id="register-btn">Registrar resultados</button>
+                    </form>
+                </div>
+            </section>
+
+            <aside class="ranking-section">
+                <h2>Clasificación</h2>
+                <div class="ranking-card">
+                    <table class="ranking-table" id="ranking-table">
+                        <thead>
+                            <tr>
+                                <th>Pos.</th>
+                                <th>Alumno</th>
+                                <th>Promedio</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ranking-body">
+                            <!-- Filas de clasificación -->
+                        </tbody>
+                    </table>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
